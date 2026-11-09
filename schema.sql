@@ -38,8 +38,7 @@ CREATE TABLE IF NOT EXISTS Likes (
     PetID INT,
     TypeofFood VARCHAR(30),
     PRIMARY KEY (PetID, TypeofFood),
-    FOREIGN KEY (PetID) REFERENCES Pets(PetID),
-    FOREIGN KEY (TypeofFood) REFERENCES Foods(TypeofFood)
+    FOREIGN KEY (PetID) REFERENCES Pets(PetID)
 );
 
 CREATE TABLE IF NOT EXISTS Foods (
@@ -57,7 +56,12 @@ CREATE TABLE IF NOT EXISTS Purchases (
     FoodID INT,
     PetID INT,
     Month VARCHAR(20),
-    Year INT
+    Year INT,
+    Quantity INT,
+    PRIMARY KEY (OID, FoodID, PetID, Month, Year),
+    FOREIGN KEY (OID) REFERENCES Owners(OID),
+    FOREIGN KEY (FoodID) REFERENCES Foods(FoodID),
+    FOREIGN KEY (PetID) REFERENCES Pets(PetID)
 );
 
 /*

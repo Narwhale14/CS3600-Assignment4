@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p, h1, th {
+    color: indianred;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    min-height: 5em;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    background-color: salmon;
+    align-items: center;
+}
+
+.utility-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: salmon;
+    user-select: none;
+    -webkit-user-select: none; /* cuz safari */
+
+    min-width: 8rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.utility-button:hover {
+    background-color: whitesmoke;
+}
+
+.utility-button.dark {
+    color: white;
+    background-color: indianred;
+}
+
+.utility-button.dark:hover {
+    background-color: color-mix(in srgb, indianred 90%, black);
+}
+
+.utility-button.small {
+    min-width: 5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+}
+
+.utility-button.current,
+.utility-button.current:hover {
+    background-color: indianred;
+    color: white;
+    cursor: not-allowed;
+}
+
+.page-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+th {
+    text-align: left;
+}
+
+th, td {
+    padding: 0.25rem;
+}
+
+.actions {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.user-input {
+    box-sizing: border-box;
+    width: 8rem;
+
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    font-size: 1rem;
+    background-color: white;
+    border: 2px solid salmon;
+    border-radius: 5px;
+}
+
+.user-input:focus {
+    outline: 2px solid indianred;
+    outline-offset: 2px;
+}
+
+.error {
+    color: firebrick;
+    font-size: 0.875rem;
+}
+
+.error:empty {
+    display: none;
+}
